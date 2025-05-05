@@ -6,6 +6,8 @@ on:
 jobs:
   build:
     runs-on: windows-latest
+    permissions:
+      contents: write  # 明确设置权限以允许创建发布版本
     steps:
       - uses: actions/checkout@v4
       - name: Set up Go
